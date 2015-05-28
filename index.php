@@ -5,7 +5,6 @@
  * Date: 5/27/15
  * Time: 11:45 AM
  */
-//$key  = cliente /
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
