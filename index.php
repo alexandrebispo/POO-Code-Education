@@ -33,7 +33,7 @@ include_once("array.php");
     ?>
     <table class="table table-striped">
         <tr>
-            <td>
+            <td colspan="2">
                 <form method="post">
                     <button class="btn btn-warning" type="submit" value="cres" name="cres">Ordem Crescente</button>
             </td>
@@ -45,11 +45,13 @@ include_once("array.php");
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Type</th>
         </tr>
         <?php   foreach($cliente as $key => $value){    ?>
             <tr>
                 <td><?php echo $value->getId();  ?></td>
                 <td><?php echo "<a href='mostraCliente.php?c=" .$value->getId(). "'>" .$value->getNome(). "</a>";  ?></td>
+                <td><?php echo $value->getType();  ?></td>
             </tr>
         <?php } ?>
     </table>

@@ -31,7 +31,20 @@ if(!array_key_exists($_GET["c"], $cliente)){   header("location: index.php");  }
                 <p><b>Nome Completo:</b> <?php echo $cliente[$_GET["c"]]->getNome()." ".$cliente[$_GET["c"]]->getSobrenome(); ?></p>
                 <p><b>Telefone:</b> <?php echo $cliente[$_GET["c"]]->getTel(); ?></p>
                 <p><b>Endereço:</b> <?php echo $cliente[$_GET["c"]]->getEndereco(); ?></p>
-               <p><b>CPF:</b> <?php echo $cliente[$_GET["c"]]->getCpf() ?></p>
+                <p><b>CPF/CNPJ:</b> <?php
+                        if($cliente[$_GET["c"]]->getType() == "Pessoa Física"){
+                            echo $cliente[$_GET["c"]]->getCpf();
+                        }else{
+                            echo $cliente[$_GET["c"]]->getCnpj();
+                        }
+                     ?></p>
+                <p><b>Classificação: </b> <?php echo $cliente[$_GET["c"]]->getStar(); ?> </p>     
+                <!-- Endereco de cobranca -->
+                <?php  if(!empty($cliente[$_GET["c"]]->getCepCobranca())): ?>
+                <p><b>Endereço de Cobrança:</b> <?php echo $cliente[$_GET["c"]]->getEnderecoCobranca(); ?></p>
+                <p><b>Complemento de Cobrança: </b> <?php echo $cliente[$_GET["c"]]->getComplementoCobranca(); ?> </p>
+                <p><b>CEP de Cobrança:</b> <?php echo $cliente[$_GET["c"]]->getCepCobranca(); ?> </p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
