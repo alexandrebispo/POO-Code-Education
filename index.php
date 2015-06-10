@@ -22,38 +22,40 @@ include_once("array.php");
 
 </head>
 <body>
-    <?php
-        if(isset($_POST['cres'])){
-            ksort($cliente);
-        }elseif(isset($_POST['dec'])){
-            krsort($cliente);
-        }else{
-            ksort($cliente);
-        }
-    ?>
-    <table class="table table-striped">
-        <tr>
-            <td colspan="2">
-                <form method="post">
-                    <button class="btn btn-warning" type="submit" value="cres" name="cres">Ordem Crescente</button>
-            </td>
-            <td>
-                <button class="btn btn-warning " type="submit" value="dec" name="dec">Ordem Decrescente</button>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Type</th>
-        </tr>
-        <?php   foreach($cliente as $key => $value){    ?>
+    <div class="container">
+            <?php
+            if(isset($_POST['cres'])){
+                ksort($cliente);
+            }elseif(isset($_POST['dec'])){
+                krsort($cliente);
+            }else{
+                ksort($cliente);
+            }
+        ?>
+        <table class="table table-striped">
             <tr>
-                <td><?php echo $value->getId();  ?></td>
-                <td><?php echo "<a href='mostraCliente.php?c=" .$value->getId(). "'>" .$value->getNome(). "</a>";  ?></td>
-                <td><?php echo $value->getType();  ?></td>
+                <td colspan="2">
+                    <form method="post">
+                        <button class="btn btn-warning" type="submit" value="cres" name="cres">Ordem Crescente</button>
+                </td>
+                <td>
+                    <button class="btn btn-warning " type="submit" value="dec" name="dec">Ordem Decrescente</button>
+                    </form>
+                </td>
             </tr>
-        <?php } ?>
-    </table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Type</th>
+            </tr>
+            <?php   foreach($cliente as $key => $value){    ?>
+                <tr>
+                    <td><?php echo $value->getId();  ?></td>
+                    <td><?php echo "<a href='mostraCliente.php?c=" .$value->getId(). "'>" .$value->getNome(). "</a>";  ?></td>
+                    <td><?php echo $value->getType();  ?></td>
+                </tr>
+            <?php } ?>
+        </table>
+    </div><!-- Fim div Container -->
 </body>
 </html>

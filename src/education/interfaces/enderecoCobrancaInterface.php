@@ -1,8 +1,8 @@
 <?php
 
-namespace education\interfaces;
+namespace Education\Interfaces;
 
-interface enderecoCobrancaInterface
+interface EnderecoCobrancaInterface
 {
 	//set o Endereco de Cobranca
 	public function setEnderecoCobranca($enderecoCobranca);

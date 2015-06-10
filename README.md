@@ -10,8 +10,7 @@ Cadastro de clientes
 
 - Nessa listagem você também deverá ter a opção de ordenar os clientes pelo seu índice de forma ascendente e descendente.
 
-Não se esqueça de caprichar na interface utilizando o twitter bootstrap.
-<<<<<<< HEAD
+- Não se esqueça de caprichar na interface utilizando o twitter bootstrap.
 
 ====================
 
@@ -26,5 +25,3 @@ Não se esqueça de caprichar na interface utilizando o twitter bootstrap.
 - Ambos os tipos devem implementar uma interface onde seja possível classificar o grau de importância do cliente para a empresa (ex: cliente 1,2,3,5 estrelas).
 
 - Você também terá a opção de criar clientes que utilizão endereço específico de cobrança, nesse caso, crie uma interface para que esses tipos de clientes possam implementar.
-=======
->>>>>>> 786c0abed7c292074a6c63531bcec7c494e7ea2a

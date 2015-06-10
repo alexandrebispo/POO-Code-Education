@@ -1,8 +1,8 @@
 <?php 
 
-namespace education\interfaces;
+namespace Education\Interfaces;
 
-	interface starImportantInterface{
+	interface StarImportantInterface{
 
 		public function getStar();
 

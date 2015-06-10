@@ -1,6 +1,6 @@
 <?php
 
-namespace education\interfaces;
+namespace Education\Interfaces;
 
 interface ClientePessoaJuridicaInterface
 {
