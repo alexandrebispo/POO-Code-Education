@@ -13,7 +13,8 @@ class ClientePessoaFisica extends ClienteAbstract implements ClientePessoaFisica
 	protected $cep;
 	protected $cpf;
 
-	public function __construct($id, $nome, $sobrenome, $tel, $endereco, $complemento, $cep, $cpf){
+	public function __construct($id, $nome, $sobrenome, $tel, $endereco, $complemento, $cep, $cpf)
+	{
 		
 		PARENT::__construct($id, $nome, $sobrenome, $tel, $endereco, $complemento, $cep, $cpf);
 
@@ -22,31 +23,38 @@ class ClientePessoaFisica extends ClienteAbstract implements ClientePessoaFisica
 		$this->cpf			= $cpf;
 	}
 
-	public function getType(){
+	public function getType()
+	{
 		return ClientePessoaFisicaInterface::type;
 	}
 
-	public function setComplemento($complemento){
+	public function setComplemento($complemento)
+	{
 		$this->complemento = $complemento;
 	}
 
-	public function getComplemento(){
+	public function getComplemento()
+	{
 		return $this->complemento;
 	}
 
-	public function setCep($cep){
+	public function setCep($cep)
+	{
 		$this->cep = $cep;
 	}
 
-	public function getCep(){
+	public function getCep()
+	{
 		return $this->cep;
 	}
 
-	public function setCpf($cpf){
+	public function setCpf($cpf)
+	{
 		$this->cpf = $cpf;
 	}
 
-	public function getCpf(){
+	public function getCpf()
+	{
 		return $this->cpf;
 	}	
 

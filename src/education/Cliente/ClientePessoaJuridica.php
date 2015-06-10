@@ -12,7 +12,8 @@ class ClientePessoaJuridica extends ClienteAbstract implements ClientePessoaJuri
 	protected $cep;
 	protected $cnpj;
 
-	public function __construct($id, $nome, $sobrenome, $tel, $endereco, $complemento, $cep, $cnpj){
+	public function __construct($id, $nome, $sobrenome, $tel, $endereco, $complemento, $cep, $cnpj)
+	{
 		parent::__construct($id, $nome, $sobrenome, $tel, $endereco, $complemento, $cep, $cnpj);
 
 		$this->complemento 	= $complemento;
@@ -21,31 +22,38 @@ class ClientePessoaJuridica extends ClienteAbstract implements ClientePessoaJuri
 
 	}
 
-	public function getType(){
+	public function getType()
+	{
 		return ClientePessoaJuridicaInterface::type;   
 	}
 
-	public function setComplemento($complemento){
+	public function setComplemento($complemento)
+	{
 		$this->complemento = $complemento;
 	}
 
-	public function getComplemento(){
+	public function getComplemento()
+	{
 		return $this->complemento;
 	}
 
-	public function setCep($cep){
+	public function setCep($cep)
+	{
 		$this->cep = $cep;
 	}
 
-	public function getCep(){
+	public function getCep()
+	{
 		return $this->cep;
 	}
 
-	public function setCnpj($cnpj){
+	public function setCnpj($cnpj)
+	{
 		$this->cnpj = $cnpj;
 	}
 
-	public function getCnpj(){
+	public function getCnpj()
+	{
 		return $this->cnpj;
 	}
 

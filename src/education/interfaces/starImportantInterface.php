@@ -2,7 +2,8 @@
 
 namespace Education\Interfaces;
 
-	interface StarImportantInterface{
+	interface StarImportantInterface
+	{
 
 		public function getStar();
 

@@ -25,3 +25,25 @@ Cadastro de clientes
 - Ambos os tipos devem implementar uma interface onde seja possível classificar o grau de importância do cliente para a empresa (ex: cliente 1,2,3,5 estrelas).
 
 - Você também terá a opção de criar clientes que utilizão endereço específico de cobrança, nesse caso, crie uma interface para que esses tipos de clientes possam implementar.
+
+======================
+
+# Refatoração
+
+- Refatore as classes utilizadas de seu projeto para que as mesmas trabalhem com namespaces.
+
+- Verifique se dentro de seu projeto há a necessidade de se trabalhar com classes abstratas.
+
+- Não se esqueça de criar a estrutura de diretórios, nome de arquivos e classes seguindo a PSR-0 (www.php-fig.org).
+
+- Faça a implementação do autoload para que você não precise mais trabalhar com require/include para a chamada de suas classes.
+
+- Deixe todo o fonte de sua aplicação no mesmo nível que o DocumentRoot do servidor web. Deixe a pasta que está visível para web (seu DocumentRoot) apenas com o index.php e os demais assets(css, javascript e imagens).
+
+DocumentRoot:
+------------
+
+```
+	php -S localhost:8000 -t public
+```
+

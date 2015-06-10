@@ -25,7 +25,8 @@ abstract class ClienteAbstract implements StarImportantInterface, EnderecoCobran
     protected $cepCobranca;
     protected $complementoCobranca;
 
-    public function __construct($id, $nome, $sobrenome, $tel, $endereco){
+    public function __construct($id, $nome, $sobrenome, $tel, $endereco)
+    {
         $this->id          = $id;
         $this->nome        = $nome;
         $this->sobrenome   = $sobrenome;
@@ -119,11 +120,13 @@ abstract class ClienteAbstract implements StarImportantInterface, EnderecoCobran
     abstract public function getType();
 
 
-    public function getStar(){
+    public function getStar()
+    {
         return $this->star;
     }
 
-    public function setStar($star){
+    public function setStar($star)
+    {
         switch ($star) {
             case "1 Estrela":
                 $this->star = $star;
@@ -147,32 +150,38 @@ abstract class ClienteAbstract implements StarImportantInterface, EnderecoCobran
     }
 
     //set o Endereco de Cobranca
-    public function setEnderecoCobranca($enderecoCobranca){
+    public function setEnderecoCobranca($enderecoCobranca)
+    {
         $this->enderecoCobranca = $enderecoCobranca;
     }
 
     //return o Endereco de Cobranca
-    public function getEnderecoCobranca(){
+    public function getEnderecoCobranca()
+    {
         return $this->enderecoCobranca;
     }
 
     //set O Complemento do Endereço de Cobranca
-    public function setComplementoCobranca($complementoCobranca){
+    public function setComplementoCobranca($complementoCobranca)
+    {
         $this->complementoCobranca = $complementoCobranca;
     }
 
     //return O Complemento do Endereço de Cobranca
-    public function getComplementoCobranca(){
+    public function getComplementoCobranca()
+    {
         return $this->complementoCobranca;
     }
 
     //set CEP do endereço de Cobrança
-    public function setCepCobranca($cepCobranca){
+    public function setCepCobranca($cepCobranca)
+    {
         $this->cepCobranca = $cepCobranca;
     }
 
     //return CEP do endereço de Cobrança
-    public function getCepCobranca(){
+    public function getCepCobranca()
+    {
         return $this->cepCobranca;
     }
 
