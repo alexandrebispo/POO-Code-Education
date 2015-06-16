@@ -8,7 +8,13 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-include_once("array.php");
+define('CLASS_DIR', '../src');
+set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
+spl_autoload_register();
+
+
+$cliente = new Education\Persist\Cliente();
+
 ?>
 <!doctype html>
 <html lang="PT-Br">
@@ -16,22 +22,13 @@ include_once("array.php");
     <meta charset="UTF-8">
     <title>Clientes</title>
     <!-- Inclusão de CSS -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css.map" type="text/css"/>
-    <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.css.map" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 
 </head>
 <body>
     <div class="container">
-            <?php
-            if(isset($_POST['cres'])){
-                ksort($cliente);
-            }elseif(isset($_POST['dec'])){
-                krsort($cliente);
-            }else{
-                ksort($cliente);
-            }
-        ?>
         <table class="table table-striped">
             <tr>
                 <td colspan="2">
@@ -48,13 +45,17 @@ include_once("array.php");
                 <th>Nome</th>
                 <th>Type</th>
             </tr>
-            <?php   foreach($cliente as $key => $value){    ?>
+            <?php   foreach($cliente->getClientes() as $key => $value){    ?>
                 <tr>
-                    <td><?php echo $value->getId();  ?></td>
-                    <td><?php echo "<a href='mostraCliente.php?c=" .$value->getId(). "'>" .$value->getNome(). "</a>";  ?></td>
-                    <td><?php echo $value->getType();  ?></td>
+                    <td><?php echo $value['idclientes']; ?></td>
+                    <td><?php echo "<a href='mostraCliente.php?c=" .$value['idclientes']. "'>" .$value['nome']. "</a>";  ?></td>
+                    <td><?php echo $value['tipo']; ?></td>
                 </tr>
-            <?php } ?>
+            <?php 
+                    } 
+
+                $cliente->flush();
+            ?>
         </table>
     </div><!-- Fim div Container -->
 </body>
