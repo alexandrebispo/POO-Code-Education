@@ -55,7 +55,6 @@ $cliente = $clientes->getCliente($id);
                 <p><b>CEP de Cobrança:</b> <?php echo $cliente['cep_cobranca']; ?> </p>
                 <?php 
                     endif;
-                    //$cliente->flush();
                  ?>
             </div>
         </div>

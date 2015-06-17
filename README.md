@@ -1,6 +1,28 @@
 # POO-Code-Education
 
+PHP Built-in Server
+------------
+
+- Instale o PHP e use PHP Built-in Server.
+
+DocumentRoot:
+
+```
+	php -S localhost:8000 -t public
+```
+
+- Instale o Mysql e certifique-se de que ele foi ligado.
+
+- Import o arquivo education.sql na pasta raiz.
+
+======================================================
+
+#FUNCIONALIDADES:
+
+======================================================
+
 Cadastro de clientes
+--------------------
 
 - Crie uma classe com os principais atributos que um cliente deve ter, como nome, cpf, endereço, etc.
 
@@ -40,21 +62,10 @@ Cadastro de clientes
 
 - Deixe todo o fonte de sua aplicação no mesmo nível que o DocumentRoot do servidor web. Deixe a pasta que está visível para web (seu DocumentRoot) apenas com o index.php e os demais assets(css, javascript e imagens).
 
-DocumentRoot:
-------------
-
-```
-	php -S localhost:8000 -t public
-```
-Start MySql:
-------------
-
-```
-sudo /usr/local/mysql/bin/mysqld_safe &
-```
+=======================
 
 # Persistência de dados
-=======================
+-----------------------
 
 - Nessa última fase do projeto, você, ao invés de trabalhar com arrays, você deverá persistir essas informações no banco de dados.
 
